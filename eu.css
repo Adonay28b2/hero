@@ -282,13 +282,6 @@ nav ul li a:hover {
     background-color: #ffea4d;
 }
 
-
-
-
-
-
-
-
 footer {
     text-align: center;
     margin: 20px auto 0;
@@ -303,16 +296,25 @@ footer {
 /* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 900px) {
-    header, #home, #heroi, #her, footer {
+
+    header,
+    #home,
+    #heroi,
+    #her,
+    footer {
         max-width: 98vw;
         padding: 20px 10px;
     }
-    .cards, .hs {
+
+    .cards,
+    .hs {
         flex-direction: column;
         align-items: center;
         gap: 18px;
     }
-    .card, .he {
+
+    .card,
+    .he {
         width: 90vw;
         max-width: 350px;
     }
@@ -324,34 +326,45 @@ footer {
         gap: 10px;
         padding: 10px 5px;
     }
+
     nav ul {
         flex-direction: column;
         gap: 10px;
         align-items: center;
     }
+
     #home {
         flex-direction: column-reverse;
         padding: 20px 5px;
         margin: 20px auto;
     }
+
     #home .img {
         max-width: 180px;
         margin: 0 auto 15px;
     }
+
     #home .text h2 {
         font-size: 1.5rem;
     }
-    #heroi, #her {
+
+    #heroi,
+    #her {
         padding: 25px 5px;
         margin: 20px auto;
     }
-    .card img, .he img {
+
+    .card img,
+    .he img {
         height: 180px;
     }
-    .card, .he {
+
+    .card,
+    .he {
         width: 95vw;
         max-width: 98vw;
     }
+
     footer {
         padding: 8px 5px;
         font-size: 0.95rem;
