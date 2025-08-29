@@ -292,7 +292,6 @@ footer {
     background-color: #1a1a1a;
     border-top: 1px solid #333;
 }
-
 /* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 900px) {
@@ -310,6 +309,7 @@ footer {
     .hs {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 18px;
     }
 
@@ -357,12 +357,28 @@ footer {
     .card img,
     .he img {
         height: 180px;
+        object-fit: cover; /* mantém proporção sem distorcer */
+        width: 100%;
     }
 
     .card,
     .he {
         width: 95vw;
         max-width: 98vw;
+    }
+
+    /* descrição menor no mobile */
+    .card .desc,
+    .he .desc {
+        font-size: 0.85rem;
+    }
+
+    /* botão de confirmação adaptado ao mobile */
+    #confirmar {
+        width: 100%;
+        max-width: 300px;
+        font-size: 1rem;
+        margin-top: 15px;
     }
 
     footer {
