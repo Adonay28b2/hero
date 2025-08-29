@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const botao = document.querySelector("#meuBotao");
+  if(botao){
+    botao.addEventListener("click", () => {
+      // código do botão
+    });
+  }
+});
+
 const cards = document.querySelectorAll('.card');
 const confirmBtn = document.getElementById('confirmarBtn'); // Corrigido aqui
 const mensagem = document.getElementById('mensagem');
