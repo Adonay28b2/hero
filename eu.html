@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="eu.css" />
+    <title>Adonay L</title>
+  </head>
+  <body>
+    <header>
+      <h1>Logo</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#her">Herois</a></li>
+          <li><a href="#heroi">Escolha</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="text">
+          <h2>CASA DOS HEROIS</h2>
+          <p>
+            Abaixo voce encontrará informações sobre nossos heróis <br />
+            Logo após, voce poderá escolher qual o seu favorito.
+          </p>
+        </div>
+        <div class="img">
+          <img src="img/heroi.jpg" alt="Imagem do Herói" />
+        </div>
+      </section>
+
+      <section id="her">
+        <h2>Nossos heróis</h2>
+        <div class="hs">
+          <div class="he">
+            <img src="img/len.jpg" alt="Herói 1" />
+            <div class="desc">
+              <strong> Vaedros</strong> é um guerreiro lendário
+            </div>
+          </div>
+          <div class="he">
+            <img src="img/mag.jpg" alt="Herói 2" />
+            <div class="desc">
+              <strong> Magus</strong> domina as artes mágicas
+            </div>
+          </div>
+          <div class="he">
+            <img src="img/for.jpg" alt="Herói 3" />
+            <div class="desc">
+              <strong> Scarlet </strong> tem força incomparável
+            </div>
+          </div>
+          <div class="he">
+            <img src="img/fra.jpg" alt="Herói 4" />
+            <div class="desc">
+              <strong> Fractalis</strong> protege os fracos
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="heroi">
+        <h2>HALL DE HEROIS</h2>
+        <p>Aqui você pode escolher seu herói favorito!</p>
+
+        <div class="cards">
+          <div class="card" data-heroi="Vaedros">
+            <img src="img/len.jpg" alt="Herói 1" />
+          </div>
+          <div class="card" data-heroi="Magus">
+            <img src="img/mag.jpg" alt="Herói 2" />
+          </div>
+          <div class="card" data-heroi="Scarlet">
+            <img src="img/for.jpg" alt="Herói 3" />
+          </div>
+          <div class="card" data-heroi="Fractalis">
+            <img src="img/fra.jpg" alt="Herói 4" />
+          </div>
+        </div>
+        <button id="confirmar" disabled>Confirmar escolha</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Adonay. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="eu.js"></script>
+  </body>
+</html>
