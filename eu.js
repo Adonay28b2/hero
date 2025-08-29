@@ -1,46 +1,46 @@
-// Seleção dos cards de herói (cards grandes)
-const cards = document.querySelectorAll(".card");
-const btnConfirmar = document.getElementById("confirmar");
-let heroiEscolhido = null;
+const cards = document.querySelectorAll('.card');
+const confirmBtn = document.getElementById('confirmarBtn'); // Corrigido aqui
+const mensagem = document.getElementById('mensagem');
 
-cards.forEach(c => {
-    c.addEventListener("click", () => {
-        // limpa dos outros
-        cards.forEach(el => {
-            el.classList.remove("ativo");
-            el.classList.remove("selecionado");
-        });
-
-        // adiciona nos clicados
-        c.classList.add("ativo");
-        c.classList.add("selecionado");
-
-        // guarda a escolha
-        heroiEscolhido = c.dataset.heroi;
-        console.log("Herói escolhido:", heroiEscolhido);
-
-        // habilita o botão
-        btnConfirmar.disabled = false;
-        btnConfirmar.classList.add("habilitado");
-    });
-});
-
-// ação do botão
-btnConfirmar.addEventListener("click", () => {
-    if (heroiEscolhido) {
-        alert("Você confirmou o " + heroiEscolhido + "!");
-        // aqui você pode redirecionar, salvar no backend, etc.
-    }
-});
+let escolha = null;
 
 // Seleção dos cards pequenos (.he) na seção "Nossos heróis"
-const cardsHe = document.querySelectorAll(".he");
+const cardsHe = document.querySelectorAll('.he');
 
-cardsHe.forEach(card => {
-    card.addEventListener("click", () => {
-        // fecha os outros
-        cardsHe.forEach(c => c.classList.remove("ativo"));
-        // abre só o clicado
-        card.classList.add("ativo");
+// Função para selecionar card principal
+if (cards.length) {
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            cards.forEach(c => c.classList.remove('selecionado'));
+            card.classList.add('selecionado');
+            escolha = card.getAttribute('data-choise') || card.getAttribute('data-choice');
+            // Habilita o botão ao selecionar
+            if (confirmBtn) {
+                confirmBtn.disabled = false;
+                confirmBtn.classList.add('habilitado');
+            }
+        });
     });
-});
+}
+
+if (confirmBtn && mensagem) {
+    confirmBtn.addEventListener('click', () => {
+        if (escolha) {
+            mensagem.textContent = `Você escolheu: ${escolha}!`;
+            mensagem.style.color = 'green';
+        } else {
+            mensagem.textContent = 'Por favor, escolha um card antes de confirmar!';
+            mensagem.style.color = 'red';
+        }
+    });
+}
+
+// Função para ativar card de herói
+if (cardsHe.length) {
+    cardsHe.forEach(card => {
+        card.addEventListener('click', () => {
+            cardsHe.forEach(c => c.classList.remove('ativo'));
+            card.classList.add('ativo');
+        });
+    });
+}

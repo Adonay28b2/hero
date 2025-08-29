@@ -179,8 +179,9 @@ nav ul li a:hover {
 
 /* estado selecionado = destaque visual */
 .card.selecionado {
-    border: 3px solid #ffd700;
-    box-shadow: 0 0 15px #ffd700aa;
+    border: 3px solid #00ff99;
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 /* HERO SECTION */
@@ -260,7 +261,7 @@ nav ul li a:hover {
     padding: 10px;
 }
 
-#confirmar {
+#confirmarBtn {
     margin-top: 20px;
     padding: 12px 24px;
     font-size: 1rem;
@@ -272,14 +273,14 @@ nav ul li a:hover {
     transition: all 0.3s ease;
 }
 
-#confirmar.habilitado {
-    background-color: #ffd700;
+#confirmarBtn.habilitado {
+    background-color: #00ff99;
     color: #000;
     cursor: pointer;
 }
 
-#confirmar.habilitado:hover {
-    background-color: #ffea4d;
+#confirmarBtn.habilitado:hover {
+    background-color: #00ff99;
 }
 
 footer {
@@ -292,6 +293,7 @@ footer {
     background-color: #1a1a1a;
     border-top: 1px solid #333;
 }
+
 /* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 900px) {
@@ -357,7 +359,8 @@ footer {
     .card img,
     .he img {
         height: 180px;
-        object-fit: cover; /* mantém proporção sem distorcer */
+        object-fit: cover;
+        /* mantém proporção sem distorcer */
         width: 100%;
     }
 
